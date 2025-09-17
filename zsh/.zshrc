@@ -1,0 +1,1 @@
+/Users/guilherme/.zshrc
