@@ -271,7 +271,8 @@ alias lol='open -a "/Applications/League of Legends.app/Contents/LoL/LeagueClien
 alias notes='open -a "/Applications/Notes.app"'
 
 # Utilities
-alias zshrc='code ~/dotfiles/zsh/.zshrc' 
+alias zshrc='code ~/dotfiles/zsh/.zshrc'
+alias config='code ~/dotfiles'
 alias extract='tar -xzvf arquivo.tar.gz'
 alias download='curl -O'
 alias delete='rm -rf'
