@@ -174,6 +174,7 @@ compress() {
 
   if [[ -z "$INPUT" ]]; then
     echo "Usage: compress input.mov"
+    return 1
   fi
 
   # Derive output path: same directory, {filename}(compressed).{extension}
@@ -184,7 +185,63 @@ compress() {
   EXT="${FILE##*.}"
   OUTPUT="${DIR}/${NAME}(compressed).${EXT}"
 
-  ffmpeg -i "$INPUT" -vcodec libx264 -crf 23 -preset medium -acodec aac -b:a 128k "$OUTPUT"
+  echo "Compressing ${FILE}..."
+  if ffmpeg -i "$INPUT" -vcodec libx264 -crf 23 -preset medium -acodec aac -b:a 128k -v warning -stats "$OUTPUT"; then
+    echo "Compressed: ${NAME}(compressed).${EXT}"
+  else
+    echo "Error: Failed to compress $INPUT"
+    return 1
+  fi
+}
+
+compress_videos() {
+  FOLDER="$1"
+
+  if [[ -z "$FOLDER" ]]; then
+    echo "Usage: compress_zip /path/to/folder"
+    return 1
+  fi
+
+  if [[ ! -d "$FOLDER" ]]; then
+    echo "Error: Directory '$FOLDER' not found"
+    return 1
+  fi
+
+  # Find video files using ls and grep
+  local VIDEO_FILES=($(ls "$FOLDER" | grep -iE '\.(mp4|mov|avi|mkv|flv|wmv|webm|m4v)$'))
+  
+  if [[ ${#VIDEO_FILES[@]} -eq 0 ]]; then
+    echo "No video files found in '$FOLDER'"
+    return 1
+  fi
+
+  echo "Found ${#VIDEO_FILES[@]} video file(s) in '$FOLDER'. Starting compression..."
+  echo "----------------------------------------"
+
+  local compressed_count=0
+  local failed_count=0
+
+  # Process each video file
+  for filename in "${VIDEO_FILES[@]}"; do
+    local full_path="$FOLDER/$filename"
+    
+    echo "Processing: $filename"
+    
+    # Compress the video using the existing compress function
+    if compress "$full_path"; then
+      ((compressed_count++))
+    else
+      ((failed_count++))
+      echo "Failed to compress: $filename"
+    fi
+    echo "----------------------------------------"
+  done
+
+  echo "Compression complete!"
+  echo "Successfully compressed: $compressed_count file(s)"
+  if [[ $failed_count -gt 0 ]]; then
+    echo "Failed to compress: $failed_count file(s)"
+  fi
 }
 
 # prompt_context() {
@@ -272,7 +329,7 @@ alias notes='open -a "/Applications/Notes.app"'
 
 # Utilities
 alias zshrc='code ~/dotfiles/zsh/.zshrc'
-alias config='code ~/dotfiles'
+alias config='cd ~/dotfiles'
 alias extract='tar -xzvf arquivo.tar.gz'
 alias download='curl -O'
 alias delete='rm -rf'
