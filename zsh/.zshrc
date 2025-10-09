@@ -315,6 +315,7 @@ alias gback='git switch -'
 alias gwhere='git branch --contains'
 alias gmerge='git merge --continue --no-edit'
 alias grev='git rev-parse --short HEAD'
+alias glo="git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'"
 
 # Applications
 alias opera='open -a Opera'
@@ -379,8 +380,10 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/emulator:$PATH
+export PATH=$ANDROID_SDK_ROOT/cmdline-tools/bin:$PATH
 export PATH=$HOME/flutter/bin:$PATH
 export PATH=/opt/homebrew/opt/python@3.13/libexec/bin:$PATH
+export PATH=/$HOME/Library/flutter/bin:$PATH
 export GTK_IM_MODULE="xim"
 # export NODE_OPTIONS="--openssl-legacy-provider"
 
