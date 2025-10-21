@@ -1,0 +1,60 @@
+-- General --
+Close app: cmd + Q
+Toggle fullscreen: ctrl + cmd + f
+Switch between apps: cmd + tab
+Switch between windows: cmd + `
+App preferences: cmd + ,
+Toggle auto/fixed Dock: cmd + option + d
+Change focus between option on opened alert: tab
+Select focused option on opened alert: space
+Previous tab: cmd + shift + {
+Next tab: cmd + shift + }
+
+-- Utilities --
+Screenshot: cmd + shift - 4
+Screenshot(without generating file): ctrl + cmd + shit + 4
+App details(menu bar): option + click on network icon
+Peek desktop: cmd + f3
+Show emoji menu: ctrl + cmd + space
+Mission Control: f3
+Zoom in: cmd + alt + =
+Zoom out: cmd + alt + -
+Toggle zoom: cmd + alt + 8
+
+
+-- Finder --
+Open "Go to folder": cmd + shift + g
+New tab: cmd + T
+Show hidden files: cmd + shift + .
+Cut and paste: select file > cmd + option + drag
+Cut and paste: cmd c > cmd + option + v
+Delete file permanently: cmd + option + delete
+Delete file: cmd + delete
+
+— Spotlight —
+Open: cmd + space
+
+— Alfred —
+Open: option + space
+
+— Iterm2 —
+Fullscreen: cmd + enter
+New tab: cmd + t
+Switch between panels: cmd + shift + [ or ]
+Split panel to the right: cmd + d
+Split panel to the bottom: cmd + shift + d
+Switch between panels: cmd + option + arrow(up, right, bottom, left)
+Notifify when command finishes: cmd + alt + a
+
+-- VSCode -- 
+New file: cmd + n
+New window: cmd + shift + n
+Select all occurrences: cmd + shift + l
+Close all tabs: cmd + shift + w
+Debug Console: cmd + shift + y
+
+-- Slack --
+Set status: cmd + shift + y
+
+-- IOS Simulator --
+Shake: ctrl + cmd + z
