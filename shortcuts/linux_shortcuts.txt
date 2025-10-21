@@ -1,0 +1,27 @@
+-- General --
+Switch between windows: ctrl + '
+Quit app: ctrl + q
+Close all app's windows: ctrl + shift + w
+Change focus between option on opened alert: tab
+Select focused option on opened alert: space
+See current applications: super
+Switch to workspace below: ctrl + shift + page down
+Switch to workspace above: ctrl + shift + page up
+Change display setup: super + t
+
+-- Utilities --
+Printscreen: prtScrn
+Printscreen(cropping): shift + screen
+Printscreen(copying to clipboard): ctrl + prtScrn
+Printscreen(cropping + copying to clipboard): ctrl + shift + prtScrn
+Change display: super + p
+
+
+-- Terminal --
+New window: ctrl + alt + t
+New tab: ctrl + shift + t
+Close tab: ctrl + shift + w
+Copy selected text: ctrl + shift + c
+Paste clipboard text: ctrl + shift + v
+Select tab: alt + tab number(1, 2, 3...)
+
