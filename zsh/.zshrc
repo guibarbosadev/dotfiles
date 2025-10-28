@@ -10,6 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="spaceship"
 
 HEADPHONE="fc-e8-06-9d-a6-8e"
+DOT="$HOME/dotfiles"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
