@@ -169,6 +169,10 @@ yversions() {
   yarn info $1 versions
 }
 
+port() {
+  lsof -i :$1
+}
+
 compress() {
   INPUT="$1"
 
