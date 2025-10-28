@@ -169,7 +169,7 @@ yversions() {
   yarn info $1 versions
 }
 
-port() {
+fport() {
   lsof -i :$1
 }
 
