@@ -366,6 +366,8 @@ alias iclean='rm -rf platforms plugins www'
 # React Native
 alias rn='react-native'
 alias rndebugger='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
+alias kyte="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
+alias app="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
 
 # Yarn/NPM
 alias compodoc='npm run compodoc'
