@@ -307,6 +307,8 @@ alias mirror='scrcpy --window-x 1608 --window-y 0 --prefer-text'
 alias sign='jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.jks platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk my-alias'
 alias phone='adb connect 192.168.0.62:5555 && mirror'
 alias phone-ip='adb shell ifconfig wlan0'
+alias emua='adb shell input keyevent 82'
+alias emum='adb shell input keyevent 82'
 # alias emu="emulator -avd Pixel_XL_API_34_2 > /dev/null 2>&1 &"
 
 # Git
