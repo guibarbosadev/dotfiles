@@ -372,6 +372,7 @@ alias kyte="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 >
 alias kytec="adb shell am force-stop com.kyte"
 alias kytek="adb shell pm clear com.kyte"
 alias kyteu="adb uninstall com.kyte"
+alias play="adb shell am start -a android.intent.action.VIEW -d \"market://details?id=com.kyte\" com.android.vending"
 alias app="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
 
 # Yarn/NPM
@@ -396,6 +397,7 @@ export PATH=$ANDROID_SDK_ROOT/cmdline-tools/bin:$PATH
 export PATH=$HOME/flutter/bin:$PATH
 export PATH=/opt/homebrew/opt/python@3.13/libexec/bin:$PATH
 export PATH=/$HOME/Library/flutter/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 export GTK_IM_MODULE="xim"
 # export NODE_OPTIONS="--openssl-legacy-provider"
 
@@ -416,3 +418,12 @@ if command -v rbenv >/dev/null; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init - zsh)"
 fi
+export PATH="$HOME/.local/bin:$PATH"
+
+# ccache for faster React Native/Xcode builds
+export CCACHE_SLOPPINESS=clang_index_store,file_stat_matches,include_file_ctime,include_file_mtime,ivfsoverlay,pch_defines,modules,system_headers,time_macros
+export CCACHE_FILECLONE=true
+export CCACHE_DEPEND=true
+export CCACHE_INODECACHE=true
+export CC="ccache clang"
+export CXX="ccache clang++"
