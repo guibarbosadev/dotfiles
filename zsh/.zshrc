@@ -311,6 +311,14 @@ alias phone-ip='adb shell ifconfig wlan0'
 alias emua='adb shell input keyevent 82'
 alias emum='adb shell input keyevent 82'
 # alias emu="emulator -avd Pixel_XL_API_34_2 > /dev/null 2>&1 &"
+alias kyte="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
+alias kytec="adb shell am force-stop com.kyte"
+alias kytek="adb shell pm clear com.kyte"
+alias kyteu="adb uninstall com.kyte"
+alias play="adb shell am start -a android.intent.action.VIEW -d \"market://details?id=com.kyte\" com.android.vending"
+alias app="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
+alias sub="adb shell am start -a \"android.intent.action.VIEW\" -d https://play.google.com/store/account/subscriptions"
+
 
 # Git
 alias gt='git stash'
@@ -369,12 +377,6 @@ alias iclean='rm -rf platforms plugins www'
 # React Native
 alias rn='react-native'
 alias rndebugger='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
-alias kyte="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
-alias kytec="adb shell am force-stop com.kyte"
-alias kytek="adb shell pm clear com.kyte"
-alias kyteu="adb uninstall com.kyte"
-alias play="adb shell am start -a android.intent.action.VIEW -d \"market://details?id=com.kyte\" com.android.vending"
-alias app="adb shell monkey -p com.kyte -c android.intent.category.LAUNCHER 1 > /dev/null 2>&1"
 
 # Yarn/NPM
 alias compodoc='npm run compodoc'
