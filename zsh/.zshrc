@@ -374,6 +374,10 @@ alias iresources='ionic cordova resources'
 alias ideploy='yarn run deploy'
 alias iclean='rm -rf platforms plugins www'
 
+
+# Docker
+alias dc="docker container"
+
 # React Native
 alias rn='react-native'
 alias rndebugger='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
