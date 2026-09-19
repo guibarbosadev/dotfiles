@@ -377,7 +377,7 @@ alias iclean='rm -rf platforms plugins www'
 
 # Docker
 alias dc="docker container"
-
+alias di="docker image"
 # React Native
 alias rn='react-native'
 alias rndebugger='open "rndebugger://set-debugger-loc?host=localhost&port=8081"'
